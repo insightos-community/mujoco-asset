@@ -13,12 +13,3 @@
 *.bin filter=lfs diff=lfs merge=lfs -text
 *.png filter=lfs diff=lfs merge=lfs -text
 *.jpg filter=lfs diff=lfs merge=lfs -text
-# Complete approved model payloads, including XML/URDF and metadata.
-robot/r1_pro/** filter=lfs diff=lfs merge=lfs -text
-robot/r1_pro_chassis/** filter=lfs diff=lfs merge=lfs -text
-robot/r1_pro_no_wheels/** filter=lfs diff=lfs merge=lfs -text
-robot/r1_pro_tote_gripper/** filter=lfs diff=lfs merge=lfs -text
-# Keep documentation and notices readable on GitHub.
-robot/**/README.md -filter diff merge text
-robot/**/LICENSE* -filter diff merge text
-robot/**/NOTICE* -filter diff merge text

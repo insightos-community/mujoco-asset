@@ -1,3 +1,83 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e406f426a33feb52785274db58e535afe29f5e5abd2db1287107785bafab7271
-size 2221
+{
+  "robot_model": "r1_pro",
+  "version": "1.0",
+  "type": "mobile_manipulator",
+  "dof": {
+    "chassis": {
+      "dof": 6,
+      "kp": [80.0, 50.0, 80.0, 50.0, 80.0, 50.0],
+      "kd": [8.0, 5.0, 8.0, 5.0, 8.0, 5.0],
+      "vmax": [3.0, 3.0, 3.0, 3.0, 3.0, 3.0],
+      "amax": 1.5,
+      "jmax": 1.5
+    },
+    "torso": {
+      "dof": 4,
+      "kp": [10000.0, 10000.0, 10000.0, 10000.0],
+      "kd": [100.0, 100.0, 100.0, 100.0],
+      "vmax": [1.5, 1.5, 1.5, 1.5],
+      "amax": 1.5,
+      "jmax": 1.5
+    },
+    "left_arm": {
+      "dof": 7,
+      "kp": [140.0, 140.0, 120.0, 100.0, 80.0, 60.0, 40.0],
+      "kd": [14.0, 14.0, 12.0, 10.0, 8.0, 6.0, 4.0],
+      "vmax": [3.0, 3.0, 3.0, 3.0, 5.0, 5.0, 5.0],
+      "amax": 1.5,
+      "jmax": 1.5
+    },
+    "left_gripper": {
+      "dof": 2,
+      "kp": [30.0, 30.0],
+      "kd": [3.0, 3.0]
+    },
+    "right_arm": {
+      "dof": 7,
+      "kp": [140.0, 140.0, 120.0, 100.0, 80.0, 60.0, 40.0],
+      "kd": [14.0, 14.0, 12.0, 10.0, 8.0, 6.0, 4.0],
+      "vmax": [3.0, 3.0, 3.0, 3.0, 5.0, 5.0, 5.0],
+      "amax": 1.5,
+      "jmax": 1.5
+    },
+    "right_gripper": {
+      "dof": 2,
+      "kp": [30.0, 30.0],
+      "kd": [3.0, 3.0]
+    }
+  },
+  "arm_kinematics": {
+    "left_arm": {
+      "joint_names": [
+        "left_arm_joint1",
+        "left_arm_joint2",
+        "left_arm_joint3",
+        "left_arm_joint4",
+        "left_arm_joint5",
+        "left_arm_joint6",
+        "left_arm_joint7"
+      ],
+      "base_frame": "left_arm_link1",
+      "ee_frame": "left_ee_site",
+      "ee_frame_fallback": "left_arm_link7"
+    },
+    "right_arm": {
+      "joint_names": [
+        "right_arm_joint1",
+        "right_arm_joint2",
+        "right_arm_joint3",
+        "right_arm_joint4",
+        "right_arm_joint5",
+        "right_arm_joint6",
+        "right_arm_joint7"
+      ],
+      "base_frame": "right_arm_link1",
+      "ee_frame": "right_ee_site",
+      "ee_frame_fallback": "right_arm_link7"
+    }
+  },
+  "sensor_support": ["actuator_pos", "actuator_vel", "actuator_frc", "imu", "gyro"],
+  "default_ee_target_frame": "torso_link4",
+  "description": "R1 Pro 移动操作机器人，包含3轮底盘、4轴躯干、双7轴机械臂及夹爪",
+  "path": "./config/r1_pro.xml"
+}

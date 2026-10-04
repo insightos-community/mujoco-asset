@@ -1,3 +1,41 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cb9f38562602dd0d15209ddd40d82eee16fc20428992a678272d4ffa81fc6f77
-size 2512
+{
+  "robot_name": "r1_pro_chassis",
+  "total_dof": 25,
+  "torso": [
+    {"joint_name": "torso_joint1", "min_limit": -65.0, "max_limit": 105.0, "zero": 0.0},
+    {"joint_name": "torso_joint2", "min_limit": -160.0, "max_limit": 145.0, "zero": 0.0},
+    {"joint_name": "torso_joint3", "min_limit": -105.0, "max_limit": 90.0, "zero": 0.0},
+    {"joint_name": "torso_joint4", "min_limit": -175.0, "max_limit": 175.0, "zero": 0.0}
+  ],
+  "left_arm": [
+    {"joint_name": "left_arm_joint1", "min_limit": -255.0, "max_limit": 75.0, "zero": 0.0},
+    {"joint_name": "left_arm_joint2", "min_limit": -10.0, "max_limit": 180.0, "zero": 0.0},
+    {"joint_name": "left_arm_joint3", "min_limit": -135.0, "max_limit": 135.0, "zero": 0.0},
+    {"joint_name": "left_arm_joint4", "min_limit": -100.0, "max_limit": 20.0, "zero": 0.0},
+    {"joint_name": "left_arm_joint5", "min_limit": -135.0, "max_limit": 135.0, "zero": 0.0},
+    {"joint_name": "left_arm_joint6", "min_limit": -60.0, "max_limit": 60.0, "zero": 0.0},
+    {"joint_name": "left_arm_joint7", "min_limit": -90.0, "max_limit": 90.0, "zero": 0.0}
+  ],
+  "left_gripper": [
+    {"joint_name": "left_gripper_finger_joint1", "min_limit": 0.0, "max_limit": 0.05, "zero": 0.0},
+    {"joint_name": "left_gripper_finger_joint2", "min_limit": 0.0, "max_limit": 0.05, "zero": 0.0}
+  ],
+  "right_arm": [
+    {"joint_name": "right_arm_joint1", "min_limit": -255.0, "max_limit": 75.0, "zero": 0.0},
+    {"joint_name": "right_arm_joint2", "min_limit": -180.0, "max_limit": 10.0, "zero": 0.0},
+    {"joint_name": "right_arm_joint3", "min_limit": -135.0, "max_limit": 135.0, "zero": 0.0},
+    {"joint_name": "right_arm_joint4", "min_limit": -100.0, "max_limit": 20.0, "zero": 0.0},
+    {"joint_name": "right_arm_joint5", "min_limit": -135.0, "max_limit": 135.0, "zero": 0.0},
+    {"joint_name": "right_arm_joint6", "min_limit": -60.0, "max_limit": 60.0, "zero": 0.0},
+    {"joint_name": "right_arm_joint7", "min_limit": -90.0, "max_limit": 90.0, "zero": 0.0}
+  ],
+  "right_gripper": [
+    {"joint_name": "right_gripper_finger_joint1", "min_limit": 0.0, "max_limit": 0.05, "zero": 0.0},
+    {"joint_name": "right_gripper_finger_joint2", "min_limit": 0.0, "max_limit": 0.05, "zero": 0.0}
+  ],
+  "chassis": [
+    {"joint_name": "root_x_translate", "min_limit": -10.0, "max_limit": 10.0, "zero": 0.0},
+    {"joint_name": "root_y_translate", "min_limit": -10.0, "max_limit": 10.0, "zero": 0.0},
+    {"joint_name": "root_z_rotate", "min_limit": -360.0, "max_limit": 360.0, "zero": 0.0}
+  ]
+}

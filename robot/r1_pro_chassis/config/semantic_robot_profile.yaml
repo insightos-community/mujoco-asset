@@ -1,3 +1,58 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3984c4caff9dde4afdad9ff13f2a26f975f8062f9a25ca750cd6ff003c57e1e1
-size 1596
+schema_version: 1
+model: r1_pro_chassis
+kind: mobile_manipulator
+coordinate_frame: world
+root_body: root
+source_quaternion_order: wxyz
+kinematics:
+  # Robot SDK 的 Pinocchio 模型以 URDF 根 link 为局部规划坐标。
+  root_frame: base_link
+  # Robot SDK 使用该 URDF 构建 Pinocchio 模型；路径相对于当前 Robot 资产目录。
+  urdf: meshes/r1_pro_with_gripper.urdf
+  # URDF 内的 package://r1_pro_chassis/... 从资产仓 robot 目录解析。
+  package_root: ..
+  end_effector_frames:
+    left: left_gripper_link
+    right: right_gripper_link
+  # 两根手指在闭合位形允许接触；其他相邻 link 由 SDK 按运动学树自动排除。
+  disabled_collision_pairs:
+    - [left_gripper_finger_link1, left_gripper_finger_link2]
+    - [right_gripper_finger_link1, right_gripper_finger_link2]
+base:
+  x_joint: root_x_translate
+  y_joint: root_y_translate
+  yaw_joint: root_z_rotate
+joint_groups:
+  torso:
+    - torso_joint1
+    - torso_joint2
+    - torso_joint3
+    - torso_joint4
+  left_arm:
+    - left_arm_joint1
+    - left_arm_joint2
+    - left_arm_joint3
+    - left_arm_joint4
+    - left_arm_joint5
+    - left_arm_joint6
+    - left_arm_joint7
+  right_arm:
+    - right_arm_joint1
+    - right_arm_joint2
+    - right_arm_joint3
+    - right_arm_joint4
+    - right_arm_joint5
+    - right_arm_joint6
+    - right_arm_joint7
+end_effectors:
+  left: left_ee_site
+  right: right_ee_site
+grippers:
+  left:
+    - left_gripper_finger_joint1
+    - left_gripper_finger_joint2
+  right:
+    - right_gripper_finger_joint1
+    - right_gripper_finger_joint2
+sensors:
+  camera: camera

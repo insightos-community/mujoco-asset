@@ -1,3 +1,110 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6c35e6f06a675ec0621ed0ee262b6a0a3a0884683bfa057a8aec65ad21b45108
-size 2323
+schema_version: 1
+model: r1_pro_chassis
+kind: mobile_manipulator
+coordinate_frame: world
+sdk_package: semantic-robot-sdk-r1pro
+backend: mujoco
+backend_profile: r1pro-tote-mujoco-v1
+root_body: root
+source_quaternion_order: wxyz
+kinematics:
+  root_frame: base_link
+  urdf: meshes/r1_pro_tote_gripper.urdf
+  package_root: ..
+  end_effector_frames:
+    left: left_tote_load_frame
+    right: right_tote_load_frame
+  disabled_collision_pairs:
+  - - left_tote_hook
+    - left_tote_clamp
+  - - right_tote_hook
+    - right_tote_clamp
+base:
+  x_joint: root_x_translate
+  y_joint: root_y_translate
+  yaw_joint: root_z_rotate
+joint_groups:
+  torso:
+  - torso_joint1
+  - torso_joint2
+  - torso_joint3
+  - torso_joint4
+  left_arm:
+  - left_arm_joint1
+  - left_arm_joint2
+  - left_arm_joint3
+  - left_arm_joint4
+  - left_arm_joint5
+  - left_arm_joint6
+  - left_arm_joint7
+  right_arm:
+  - right_arm_joint1
+  - right_arm_joint2
+  - right_arm_joint3
+  - right_arm_joint4
+  - right_arm_joint5
+  - right_arm_joint6
+  - right_arm_joint7
+joint_control:
+  torso:
+    kp: 2400.0
+    kd: 80.0
+  left_arm:
+    kp: 300.0
+    kd: 8.0
+  right_arm:
+    kp: 300.0
+    kd: 8.0
+  left:
+    kp: 5000.0
+    kd: 55.0
+  right:
+    kp: 5000.0
+    kd: 55.0
+end_effectors:
+  left: left_tote_load_frame
+  right: right_tote_load_frame
+grippers:
+  left:
+  - left_tote_clamp_joint
+  right:
+  - right_tote_clamp_joint
+gripper_tools:
+  left:
+    kind: tote_clamp
+    tool_ref: component://tool/left
+    frame: left_tote_load_frame
+    joint: left_tote_clamp_joint
+    software_range_m:
+    - 0.0
+    - 0.03900000000000001
+    normal_force_n: 60.0
+    peak_force_n: 120.0
+    control_force_scale_n_per_unit: 1.0
+    hook_bodies:
+    - left_tote_hook
+    clamp_bodies:
+    - left_tote_clamp
+    minimum_clamp_force_n: 15.0
+    minimum_hook_force_n: 1.0
+    maximum_slip_speed_m_s: 0.025
+  right:
+    kind: tote_clamp
+    tool_ref: component://tool/right
+    frame: right_tote_load_frame
+    joint: right_tote_clamp_joint
+    software_range_m:
+    - 0.0
+    - 0.03900000000000001
+    normal_force_n: 60.0
+    peak_force_n: 120.0
+    control_force_scale_n_per_unit: 1.0
+    hook_bodies:
+    - right_tote_hook
+    clamp_bodies:
+    - right_tote_clamp
+    minimum_clamp_force_n: 15.0
+    minimum_hook_force_n: 1.0
+    maximum_slip_speed_m_s: 0.025
+sensors:
+  camera: camera

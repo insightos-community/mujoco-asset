@@ -4,5 +4,3 @@ __pycache__/
 *.orig
 *.rej
 .DS_Store
-# Keep locally imported variants outside the approved baseline out of Git.
-/robot/r1_pro_local/

@@ -1,3 +1,49 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f9cf8d72785d7230a27428fec24ecb5e74f6aa382bcaaa670f1b2da3059b6159
-size 1689
+{
+  "robot_name": "r1_pro_no_wheels",
+  "left_arm": {
+    "dof": 7,
+    "dh_parameters": [
+      {"alpha": 90.0,  "a": 0.0,    "d": 0.0,    "theta": 0.0},
+      {"alpha": 0.0,   "a": 0.025012, "d": 0.0,  "theta": 0.0},
+      {"alpha": 90.0,  "a": 0.0,    "d": 0.1155, "theta": 0.0},
+      {"alpha": -90.0, "a": 0.0,    "d": 0.1945, "theta": 0.0},
+      {"alpha": 90.0,  "a": 0.0,    "d": 0.095,  "theta": 0.0},
+      {"alpha": -90.0, "a": 0.0,    "d": 0.16305,"theta": 0.0},
+      {"alpha": 0.0,   "a": 0.0295, "d": 0.0,    "theta": 0.0}
+    ],
+    "joint_limits": [
+      {"min": -255.0, "max": 75.0},
+      {"min": -10.0,  "max": 180.0},
+      {"min": -135.0, "max": 135.0},
+      {"min": -100.0, "max": 20.0},
+      {"min": -135.0, "max": 135.0},
+      {"min": -60.0,  "max": 60.0},
+      {"min": -90.0,  "max": 90.0}
+    ]
+  },
+  "right_arm": {
+    "dof": 7,
+    "dh_parameters": [
+      {"alpha": 90.0,  "a": 0.0,    "d": 0.0,    "theta": 0.0},
+      {"alpha": 0.0,   "a": 0.023988, "d": 0.0,  "theta": 0.0},
+      {"alpha": 90.0,  "a": 0.0,    "d": 0.1155, "theta": 0.0},
+      {"alpha": -90.0, "a": 0.0,    "d": 0.1945, "theta": 0.0},
+      {"alpha": 90.0,  "a": 0.0,    "d": 0.095,  "theta": 0.0},
+      {"alpha": -90.0, "a": 0.0,    "d": 0.16305,"theta": 0.0},
+      {"alpha": 0.0,   "a": 0.0295, "d": 0.0,    "theta": 0.0}
+    ],
+    "joint_limits": [
+      {"min": -255.0, "max": 75.0},
+      {"min": -180.0, "max": 10.0},
+      {"min": -135.0, "max": 135.0},
+      {"min": -100.0, "max": 20.0},
+      {"min": -135.0, "max": 135.0},
+      {"min": -60.0,  "max": 60.0},
+      {"min": -90.0,  "max": 90.0}
+    ]
+  },
+  "unit": {
+    "angle": "degree",
+    "length": "meter"
+  }
+}

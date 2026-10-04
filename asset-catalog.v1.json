@@ -11,25 +11,29 @@
         "id": "robot-r1-pro-chassis-v1",
         "asset_key": "robot/r1_pro_chassis/config/r1_pro_chassis.xml",
         "kind": "robot",
-        "metadata": {"model": "r1_pro_chassis"}
+        "metadata": {
+          "model": "r1_pro_chassis"
+        }
       },
       "preview": {
-        "shape": "box", "size": [0.8, 0.55, 1.2],
-        "color": "#315cec", "placeholder": true
+        "shape": "box",
+        "size": [0.8, 0.55, 1.2],
+        "color": "#315cec",
+        "placeholder": true
       },
-      "default_properties": {"model": "r1_pro_chassis", "sensor_names": ["camera"]},
-      "source": "Galaxea Dynamics; Semantic maintenance adaptation; see ASSET_PROVENANCE.md",
-      "license": "See ASSET_PROVENANCE.md; third-party terms apply",
-      "distribution_status": "redistributable"
+      "default_properties": {
+        "model": "r1_pro_chassis",
+        "sensor_names": ["camera"]
+      },
+      "source": "unknown",
+      "license": "pending",
+      "distribution_status": "internal-only"
     },
     {
       "catalog_id": "box",
       "label": "Box",
       "node_kind": "object",
-      "tags": [
-        "native-mujoco",
-        "depalletizing"
-      ],
+      "tags": ["native-mujoco", "depalletizing"],
       "asset": {
         "id": "object-box-v1",
         "asset_key": "assets/objects/box.xml",
@@ -41,54 +45,34 @@
       },
       "preview": {
         "shape": "box",
-        "size": [
-          0.5,
-          0.5,
-          0.5
-        ],
+        "size": [0.5, 0.5, 0.5],
         "color": "#d89b45",
         "placeholder": true
       },
       "default_properties": {
         "model": "box",
         "category": "box",
-        "size": [
-          0.5,
-          0.5,
-          0.5
-        ],
+        "size": [0.5, 0.5, 0.5],
         "mass": 0.5,
         "static": false,
         "interactive": true,
         "material": {
-          "rgba": [
-            0.85,
-            0.55,
-            0.2,
-            1
-          ]
+          "rgba": [0.85, 0.55, 0.2, 1]
         },
         "collision": {
           "enabled": true,
-          "friction": [
-            1,
-            0.005,
-            0.0001
-          ]
+          "friction": [1, 0.005, 0.0001]
         }
       },
-      "source": "InsightOS original asset; see ASSET_PROVENANCE.md",
-      "license": "Apache-2.0",
-      "distribution_status": "redistributable"
+      "source": "unknown",
+      "license": "pending",
+      "distribution_status": "internal-only"
     },
     {
       "catalog_id": "pallet",
       "label": "Pallet",
       "node_kind": "object",
-      "tags": [
-        "native-mujoco",
-        "depalletizing"
-      ],
+      "tags": ["native-mujoco", "depalletizing"],
       "asset": {
         "id": "object-pallet-v1",
         "asset_key": "assets/objects/box.xml",
@@ -100,53 +84,33 @@
       },
       "preview": {
         "shape": "box",
-        "size": [
-          1.2,
-          1,
-          0.15
-        ],
+        "size": [1.2, 1, 0.15],
         "color": "#5f6f93",
         "placeholder": true
       },
       "default_properties": {
         "model": "box",
         "category": "pallet",
-        "size": [
-          1.2,
-          1,
-          0.15
-        ],
+        "size": [1.2, 1, 0.15],
         "static": true,
         "interactive": false,
         "material": {
-          "rgba": [
-            0.15,
-            0.22,
-            0.4,
-            1
-          ]
+          "rgba": [0.15, 0.22, 0.4, 1]
         },
         "collision": {
           "enabled": true,
-          "friction": [
-            1.2,
-            0.01,
-            0.0001
-          ]
+          "friction": [1.2, 0.01, 0.0001]
         }
       },
-      "source": "InsightOS original asset; see ASSET_PROVENANCE.md",
-      "license": "Apache-2.0",
-      "distribution_status": "redistributable"
+      "source": "unknown",
+      "license": "pending",
+      "distribution_status": "internal-only"
     },
     {
       "catalog_id": "target",
       "label": "Target",
       "node_kind": "object",
-      "tags": [
-        "native-mujoco",
-        "depalletizing"
-      ],
+      "tags": ["native-mujoco", "depalletizing"],
       "asset": {
         "id": "object-target-v1",
         "asset_key": "assets/objects/target.xml",
@@ -158,39 +122,26 @@
       },
       "preview": {
         "shape": "box",
-        "size": [
-          1.4,
-          1.4,
-          0.05
-        ],
+        "size": [1.4, 1.4, 0.05],
         "color": "#40bf8c",
         "placeholder": true
       },
       "default_properties": {
         "model": "target",
         "category": "target",
-        "size": [
-          1.4,
-          1.4,
-          0.05
-        ],
+        "size": [1.4, 1.4, 0.05],
         "static": true,
         "interactive": true,
         "material": {
-          "rgba": [
-            0.25,
-            0.75,
-            0.55,
-            0.38
-          ]
+          "rgba": [0.25, 0.75, 0.55, 0.38]
         },
         "collision": {
           "enabled": false
         }
       },
-      "source": "InsightOS original asset; see ASSET_PROVENANCE.md",
-      "license": "Apache-2.0",
-      "distribution_status": "redistributable"
+      "source": "unknown",
+      "license": "pending",
+      "distribution_status": "internal-only"
     }
   ]
 }

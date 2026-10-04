@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8ec6536cf100207b2fe5ac509617a3e788374dff72e1ed02940c3c023a4cfde9
-size 229
+# Blender 4.2.4 LTS MTL File: 'None'
+# www.blender.org
+
+newmtl Material.027
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd output.jpg

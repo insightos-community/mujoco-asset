@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4777b96e7ca1753fec1acda59fdc50ec66c6017d27e124ee054c6d03cdffd15b
-size 429
+{
+  "robot_model": "r1_pro_no_wheels",
+  "version": "1.0",
+  "type": "mobile_manipulator",  
+  "dof": { 
+    "torso": 4,     
+    "left_arm": 7, 
+    "right_arm": 7, 
+    "gripper": 2  
+  },
+  "sensor_support": ["actuator_pos", "actuator_vel", "actuator_frc", "imu", "gyro"],
+  "description": "R1 Pro 移动操作机器人，包含3轮底盘、4轴躯干、双7轴机械臂及夹爪",
+  "path": "./config/r1_pro_no_wheels.xml"
+}

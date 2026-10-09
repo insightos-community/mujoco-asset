@@ -13,8 +13,8 @@ Meshes, images, GLBs, and other large files are managed by Git LFS. Install Git 
 
 ```bash
 git lfs install
-git clone <mujoco_asset 仓库地址>
-cd mujoco_asset
+git clone https://github.com/insightos-community/mujoco-asset.git
+cd mujoco-asset
 git lfs pull
 ```
 
